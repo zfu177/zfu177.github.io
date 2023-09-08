@@ -6,7 +6,5 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - env:
-          super_secret: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        run: echo "$super_secret"
+        - run: echo ${{ secrets.MY_SECERT }}
 

@@ -5,9 +5,8 @@ on: [push]
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
-    env: # Or as an environment variable
-      super_secret: ${{ secrets.AWS_ACCESS_KEY_ID }}
     steps:
-      - run: aws --version
-      - run: echo ${super_secret}
+      - env:
+          super_secret: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        run: echo "$super_secret"
 

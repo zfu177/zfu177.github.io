@@ -12,7 +12,5 @@ jobs:
     runs-on: ubuntu-latest
     environment: dev
     steps:
-      - run: echo vars
-      - run: echo ${{ toJson(vars) }}
-      - run: echo env
-      - run: echo ${{ toJson(env) }}
+      - run: echo DESTINATION
+      - run: echo ${{ vars.DESTINATION }}
